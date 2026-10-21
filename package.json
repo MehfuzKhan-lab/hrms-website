@@ -1,0 +1,12 @@
+{
+  "name": "hrms-prototype",
+  "version": "1.0.0",
+  "description": "Human Resource Management System prototype",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

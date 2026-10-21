@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseHR | HRMS Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">P</div>
+          <div>
+            <h1>PulseHR</h1>
+            <small>Management Suite</small>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav-item active" href="#overview">Overview</a>
+          <a class="nav-item" href="#employees">Employees</a>
+          <a class="nav-item" href="#attendance">Attendance</a>
+          <a class="nav-item" href="#leave">Leave</a>
+          <a class="nav-item" href="#payroll">Payroll</a>
+          <a class="nav-item" href="#reports">Reports</a>
+          <a class="nav-item" href="#settings">Settings</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="mini-label">Team Status</p>
+          <div class="status-row">
+            <span class="dot online"></span>
+            <span>42 online</span>
+          </div>
+          <div class="status-row">
+            <span class="dot away"></span>
+            <span>6 in meetings</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Good morning</p>
+            <h2>HR dashboard</h2>
+          </div>
+          <div class="top-actions">
+            <button class="outline-btn">Export</button>
+            <button class="primary-btn">+ Add employee</button>
+          </div>
+        </header>
+
+        <section id="overview" class="hero-grid">
+          <div class="hero-card accent">
+            <div class="hero-head">
+              <span class="badge success">+12.4%</span>
+              <span class="mini-label muted">This month</span>
+            </div>
+            <h3>Workforce overview</h3>
+            <div class="hero-stats">
+              <div>
+                <strong>248</strong>
+                <span>Total employees</span>
+              </div>
+              <div>
+                <strong>94%</strong>
+                <span>Attendance rate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card dark">
+            <p class="mini-label muted">Today</p>
+            <h3>18 leave requests</h3>
+            <ul class="mini-list">
+              <li>6 pending approval</li>
+              <li>2 medical leaves</li>
+              <li>1 annual leave plan</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="icon blue">👥</div>
+            <div>
+              <p>Total employees</p>
+              <h3>248</h3>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="icon green">✅</div>
+            <div>
+              <p>Present today</p>
+              <h3>231</h3>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="icon orange">🗓️</div>
+            <div>
+              <p>On leave</p>
+              <h3>17</h3>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="icon red">💰</div>
+            <div>
+              <p>Payroll this month</p>
+              <h3>$184.5K</h3>
+            </div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel" id="employees">
+            <div class="section-head">
+              <h3>Employee directory</h3>
+              <button class="text-btn">View all</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="user-pill"><span class="avatar a1">AJ</span> Alice Johnson</span></td>
+                  <td>Engineering</td>
+                  <td><span class="tag success">Active</span></td>
+                  <td>New York</td>
+                </tr>
+                <tr>
+                  <td><span class="user-pill"><span class="avatar a2">MK</span> Mark Khan</span></td>
+                  <td>Finance</td>
+                  <td><span class="tag warning">On leave</span></td>
+                  <td>Dubai</td>
+                </tr>
+                <tr>
+                  <td><span class="user-pill"><span class="avatar a3">SL</span> Sofia Lee</span></td>
+                  <td>HR</td>
+                  <td><span class="tag success">Active</span></td>
+                  <td>Singapore</td>
+                </tr>
+                <tr>
+                  <td><span class="user-pill"><span class="avatar a4">DP</span> Daniel Park</span></td>
+                  <td>Operations</td>
+                  <td><span class="tag info">Remote</span></td>
+                  <td>Seoul</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel" id="attendance">
+            <div class="section-head">
+              <h3>Attendance</h3>
+              <button class="text-btn">This week</button>
+            </div>
+
+            <div class="attendance-list">
+              <div class="attendance-item">
+                <div>
+                  <strong>Monday</strong>
+                  <small>98% present</small>
+                </div>
+                <div class="bar"><span style="width: 98%"></span></div>
+              </div>
+              <div class="attendance-item">
+                <div>
+                  <strong>Tuesday</strong>
+                  <small>96% present</small>
+                </div>
+                <div class="bar"><span style="width: 96%"></span></div>
+              </div>
+              <div class="attendance-item">
+                <div>
+                  <strong>Wednesday</strong>
+                  <small>94% present</small>
+                </div>
+                <div class="bar"><span style="width: 94%"></span></div>
+              </div>
+              <div class="attendance-item">
+                <div>
+                  <strong>Thursday</strong>
+                  <small>92% present</small>
+                </div>
+                <div class="bar"><span style="width: 92%"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel" id="leave">
+            <div class="section-head">
+              <h3>Leave requests</h3>
+              <button class="text-btn">Manage</button>
+            </div>
+
+            <ul class="request-list">
+              <li>
+                <div>
+                  <strong>Maria Gomez</strong>
+                  <small>Casual leave • 3 days</small>
+                </div>
+                <span class="tag warning">Pending</span>
+              </li>
+              <li>
+                <div>
+                  <strong>David Wu</strong>
+                  <small>Sick leave • 2 days</small>
+                </div>
+                <span class="tag success">Approved</span>
+              </li>
+              <li>
+                <div>
+                  <strong>Priya Nair</strong>
+                  <small>Annual leave • 5 days</small>
+                </div>
+                <span class="tag info">Review</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel" id="payroll">
+            <div class="section-head">
+              <h3>Payroll overview</h3>
+              <button class="text-btn">Run payroll</button>
+            </div>
+
+            <div class="payroll-card">
+              <div>
+                <p class="mini-label muted">Net payroll</p>
+                <h3>$184,500</h3>
+              </div>
+              <div class="payroll-legend">
+                <div><span class="swatch blue"></span> Salary</div>
+                <div><span class="swatch green"></span> Benefits</div>
+              </div>
+            </div>
+            <div class="payroll-row">
+              <span>Salary expense</span>
+              <strong>$140,800</strong>
+            </div>
+            <div class="payroll-row">
+              <span>Benefits</span>
+              <strong>$28,800</strong>
+            </div>
+            <div class="payroll-row">
+              <span>Deductions</span>
+              <strong>$15,100</strong>
+            </div>
+          </div>
+
+          <div class="panel" id="reports">
+            <div class="section-head">
+              <h3>Reports</h3>
+              <button class="text-btn">Generate</button>
+            </div>
+
+            <div class="report-box">
+              <div class="report-item">
+                <span>Headcount trend</span>
+                <strong>+8.7%</strong>
+              </div>
+              <div class="report-item">
+                <span>Attrition</span>
+                <strong>2.4%</strong>
+              </div>
+              <div class="report-item">
+                <span>Training completion</span>
+                <strong>91%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="activity-panel panel" id="settings">
+          <div class="section-head">
+            <h3>Recent activity</h3>
+            <button class="text-btn">View timeline</button>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div>
+                <strong>Payroll processed</strong>
+                <small>2 hours ago</small>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div>
+                <strong>New hire onboarded</strong>
+                <small>Yesterday</small>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div>
+                <strong>Attendance policy updated</strong>
+                <small>3 days ago</small>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
